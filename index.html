@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz da Onça - Feliz Aniversário</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <!-- Imagem estilizada de onça (externa) -->
+    <div class="onca-art">
+      <img src="https://images.pexels.com/photos/2499900/pexels-photo-2499900.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Onça-pintada" />
+    </div>
+    <h1 class="title">Quiz da Onça</h1>
+    <p class="subtitle">Responda todas as perguntas até liberar a surpresa 🎉</p>
+  </header>
+
+  <main class="container">
+    <section class="card" id="quiz-card">
+      <div class="progress" id="progress">Pergunta 1 / 5</div>
+      <h2 id="question">Pergunta aparecerá aqui</h2>
+      <div id="options" class="options"></div>
+      <div class="controls">
+        <button id="nextBtn" class="btn primary" disabled>Próxima</button>
+        <button id="restartBtn" class="btn">Reiniciar</button>
+      </div>
+    </section>
+
+    <section class="end-screen hidden" id="endScreen">
+      <div class="celebration" id="celebration">
+        <h2>FELIZ ANIVERSÁRIO!</h2>
+
+        <div class="card-photo">
+          <img src="./assets/WhatsApp%20Image%202025-12-31%20at%2016.42.58.jpeg" alt="Foto do aniversariante" class="static-photo" />
+        </div>
+
+        <p class="congrats">Você chegou até o fim 🎉 Que seu dia seja tão selvagem e incrível quanto uma onça!</p>
+
+        <div class="roar-controls">
+          <button id="playRoar" class="btn" style="display:none">Tocar rugido</button>
+          <span id="roarStatus" class="roar-status"></span>
+        </div>
+
+        <button id="playAgain" class="btn primary">Jogar de novo</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">🔸 <small>Design inspirado na onça — imagens externas via Pexels</small></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

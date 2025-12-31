@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+:root{
+  --bg:#F7E9D1;
+  --accent:#E08A24;
+  --dark:#2a1f0f;
+  --card:#fff9f0;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Poppins', Arial, sans-serif;
+  background: radial-gradient(circle at 10% 10%, rgba(0,0,0,0.03) 0 2px, transparent 2px),
+              radial-gradient(circle at 90% 90%, rgba(0,0,0,0.03) 0 2px, transparent 2px),
+              var(--bg);
+  color:var(--dark);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.site-header{
+  width:100%;
+  max-width:1100px;
+  padding:18px;
+  text-align:center;
+}
+.onca-art{max-width:680px;margin:0 auto 12px;}
+.onca-art img{width:100%;height:160px;object-fit:cover;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,0.12);border:4px solid rgba(255,255,255,0.6);}
+.title{margin:8px 0 0;font-size:28px;font-weight:700}
+.subtitle{margin:4px 0 12px;color:#805017}
+.container{width:100%;max-width:720px;padding:16px}
+.card{background:linear-gradient(180deg, var(--card), #fff);border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,0.08);padding:24px}
+.progress{font-size:14px;color:#b07a2e;margin-bottom:8px}
+h2{margin:6px 0 12px}
+.options{display:grid;grid-template-columns:1fr;gap:10px}
+.option-btn{background:#fff;border:2px solid rgba(0,0,0,0.06);padding:12px;border-radius:10px;cursor:pointer;text-align:left;transition:transform .12s ease, box-shadow .12s}
+.option-btn:hover{transform:translateY(-4px);box-shadow:0 6px 16px rgba(160,90,20,0.12)}
+.option-btn.selected{border-color:var(--accent);box-shadow:0 6px 16px rgba(224,138,36,0.12)}
+
+/* Text input question styles */
+.text-input{width:100%;padding:12px;border-radius:10px;border:2px solid rgba(42,31,15,0.08);font-size:16px}
+.text-controls{display:flex;gap:10px;justify-content:flex-end;margin-top:8px}
+.check-btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;background:var(--accent);color:#fff}
+.hint-btn{padding:10px 12px;border-radius:10px;border:0;background:#fff9f0;cursor:pointer}
+.feedback{margin-top:8px;color:#a33;font-size:15px;min-height:20px}
+.feedback.correct{color:#1f9a6f}
+
+@keyframes shake{0%{transform:translateX(0)}25%{transform:translateX(-6px)}50%{transform:translateX(6px)}75%{transform:translateX(-6px)}100%{transform:translateX(0)}}
+.shake{animation:shake .42s}
+
+.controls{display:flex;gap:10px;justify-content:flex-end;margin-top:14px}
+.btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;background:#fff9f0}
+.btn.primary{background:var(--accent);color:#fff;font-weight:600}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.end-screen{margin-top:20px}
+.end-screen.hidden{display:none}
+.celebration{background:linear-gradient(180deg,#fffafa,#fff4e6);border-radius:12px;padding:26px;text-align:center;box-shadow:0 10px 40px rgba(224,138,36,0.12)}
+.celebration h2{font-size:36px;color:var(--accent);margin:6px 0}
+
+/* Photo card */
+.card-photo{display:flex;flex-direction:column;gap:10px;align-items:center;margin:12px 0}
+.photo-area{width:240px;height:160px;border-radius:12px;display:flex;align-items:center;justify-content:center;border:2px dashed rgba(42,31,15,0.08);overflow:hidden;position:relative;cursor:pointer;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:transparent}
+.photo-area.has-photo{border:0;background:transparent}
+.photo-area.has-photo .photo-placeholder{display:none}
+.photo-area.has-photo img{display:none}
+.photo-placeholder{color:#8b6a3f;font-size:14px}
+.photo-area img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-area img.hidden{display:none}
+.photo-controls{display:flex;gap:8px;align-items:center}
+.photo-controls input[type="file"]{background:#fff9f0;padding:6px;border-radius:8px}
+.static-photo{width:240px;height:160px;object-fit:cover;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+
+.roar-controls{display:flex;gap:8px;align-items:center;justify-content:center;margin-bottom:8px}
+.roar-status{font-size:13px;color:#8b6a3f}
+
+.congrats{color:#6b4a1a}
+.site-footer{margin:20px 0 40px;color:#8b6a3f}
+
+/* Confetti */
+.confetti{position:fixed;left:0;right:0;top:0;bottom:0;pointer-events:none;overflow:hidden}
+.confetti span{position:absolute;display:block;width:10px;height:14px;border-radius:2px;opacity:0.95}
+@keyframes fall{0%{transform:translateY(-10vh) rotate(0)}100%{transform:translateY(110vh) rotate(540deg)}}
+
+/* Responsivo */
+@media (min-width:700px){
+  .options{grid-template-columns:1fr 1fr}
+  .title{font-size:34px}
+}
